@@ -3,7 +3,6 @@
 #include <list>
 
 void ShakerSort(std::list<int>& data) {
-    void cocktailSort(std::list<int>& lst) {
     bool swapped = true;
     auto start = lst.begin();
     auto end = lst.end();
