@@ -1,7 +1,7 @@
 #include "sort_algorithms.h"
 #include <list>
 
-void insertionSortSereda(std::list<int>& data) {
+void insertionSort_Sereda(std::list<int>& data) {
     for (auto it = std::next(data.begin()); it != data.end(); ++it) {
 
         int key = *it;
