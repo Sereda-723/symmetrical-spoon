@@ -1,14 +1,10 @@
-#include <sort_algorithms.h> 
+#include "sort_algorithms.h"
 #include <iostream> 
 #include <list> 
 
-void insertionSortSereda(std::list<int>& data) {
-
-}
-
 using namespace std;
 
-void merge(list<int>& arr, list<int>::iterator left, list<int>::iterator mid, list<int>::iterator right) {
+void merge(list<int>::iterator left, list<int>::iterator mid, list<int>::iterator right) {
     list<int> L(left, mid);
     list<int> R(mid, right);
 
@@ -47,10 +43,10 @@ void mergeSort(list<int>& arr, list<int>::iterator left, list<int>::iterator rig
         mergeSort(arr, left, mid);
         mergeSort(arr, mid, right);
 
-        merge(arr, left, mid, right);
+        merge(arr.begin(), mid, right);
     }
 }
 
-void mergeSort(list<int>& arr) {
+void mergeSort_Batmanov(list<int>& arr) {
     mergeSort(arr, arr.begin(), arr.end());
 }

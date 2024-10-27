@@ -66,8 +66,8 @@ int main() {
     
     RUN(insertionSort_Sereda, true);
     RUN(heapSort_Aliev, false);
+    RUN(mergeSort_Batmanov, false);
     // RUN(treeSort);
-    // RUN(mergeSortBatmanov);
     // RUN(gnomeSortNikitina);
     // RUN(shakerSort);
     // RUN(insertionSortSereda);
@@ -83,6 +83,7 @@ int main() {
     
     RUN(insertionSort_Sereda, true);
     RUN(heapSort_Aliev, false);
+    RUN(mergeSort_Batmanov, false);
     // RUN(treeSort);
     // RUN(mergeSortBatmanov);
     // RUN(gnomeSortNikitina);
@@ -100,6 +101,7 @@ int main() {
     
     RUN(insertionSort_Sereda, true);
     RUN(heapSort_Aliev, false);
+    RUN(mergeSort_Batmanov, false);
     // RUN(treeSort);
     // RUN(mergeSortBatmanov);
     // RUN(gnomeSortNikitina);
