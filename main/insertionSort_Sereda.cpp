@@ -1,6 +1,6 @@
-#include <sort_algorithms.h>
+// #include <sort_algorithms.h>
 
 
-void insertionSortSereda(std::list<int>& data) {
+// void insertionSortSereda(std::list<int>& data) {
 
-}
+// }

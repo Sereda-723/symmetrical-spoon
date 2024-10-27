@@ -6,7 +6,7 @@
 #include <chrono>
 #include <fstream>
 #include <data_generator.h>
-#include <sort_algorithms.h>
+#include "sort_algorithms.h"
 #include <vector>
 
 
@@ -15,7 +15,7 @@ using namespace std;
 #define RUN(x) {                \
     Run(#x, x, data);           \
 }
-//sffsfhfhdfhf
+
 string dataset;
 vector<string> logs;
 
@@ -48,32 +48,32 @@ int main() {
     dataset = "BestCase";
     cout << "Testing on the best case...." << endl;
     list<int> data = generateBestData(size);
-    RUN(heapSortAliev);
-    RUN(treeSort);
-    RUN(mergeSortBatmanov);
-    RUN(gnomeSortNikitina);
-    RUN(shakerSort);
-    RUN(insertionSortSereda);
+    RUN(heapSort_Aliev);
+    // RUN(treeSort);
+    // RUN(mergeSortBatmanov);
+    // RUN(gnomeSortNikitina);
+    // RUN(shakerSort);
+    // RUN(insertionSortSereda);
 
     dataset = "WorstCase";
     cout << "Testing on the worst case...." << endl;
     list<int> data = generateWorstData(size);
-    RUN(heapSortAliev);
-    RUN(treeSort);
-    RUN(mergeSortBatmanov);
-    RUN(gnomeSortNikitina);
-    RUN(shakerSort);
-    RUN(insertionSortSereda);
+    RUN(heapSort_Aliev);
+    // RUN(treeSort);
+    // RUN(mergeSortBatmanov);
+    // RUN(gnomeSortNikitina);
+    // RUN(shakerSort);
+    // RUN(insertionSortSereda);
 
     dataset = "RandomCase";
     cout << "Testing on the random case...." << endl;
     list<int> data = generateRandomData(size);
-    RUN(heapSortAliev);
-    RUN(treeSort);
-    RUN(mergeSortBatmanov);
-    RUN(gnomeSortNikitina);
-    RUN(shakerSort);
-    RUN(insertionSortSereda);
+    RUN(heapSort_Aliev);
+    // RUN(treeSort);
+    // RUN(mergeSortBatmanov);
+    // RUN(gnomeSortNikitina);
+    // RUN(shakerSort);
+    // RUN(insertionSortSereda);
 
 }
 

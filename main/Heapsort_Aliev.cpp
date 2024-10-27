@@ -1,3 +1,4 @@
+#include <sort_algorithms.h>
 #include <iostream>
 #include <list>
 
@@ -23,7 +24,7 @@ void heapify(list<int>& arr, int n, int i) {
     }
 }
 
-void heapSort(list<int>& arr) {
+void heapSort_Aliev(list<int>& arr) {
     int n = arr.size();
 
     for (int i = n / 2 - 1; i >= 0; i--) {
