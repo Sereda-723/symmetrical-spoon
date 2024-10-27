@@ -40,9 +40,7 @@ void merge(list<int>& arr, list<int>::iterator left, list<int>::iterator mid, li
     }
 }
 
-void mergeSort(list<int>& arr) {
-    left = arr.begin();
-    right = arr.end();
+void mergeSort(list<int>& arr, list<int>::iterator left, list<int>::iterator right) {
     if (distance(left, right) > 1) {
         auto mid = next(left, distance(left, right) / 2);
 
@@ -51,4 +49,8 @@ void mergeSort(list<int>& arr) {
 
         merge(arr, left, mid, right);
     }
+}
+
+void mergeSort(list<int>& arr) {
+    mergeSort(arr, arr.begin(), arr.end());
 }
