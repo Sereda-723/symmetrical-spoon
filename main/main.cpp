@@ -68,9 +68,9 @@ int main() {
     RUN(heapSort_Aliev, false);
     RUN(mergeSort_Batmanov, false);
     // RUN(treeSort);
-    // RUN(gnomeSortNikitina);
-    // RUN(shakerSort);
-    // RUN(insertionSortSereda);
+    RUN(gnomeSort_Nikitina, false);
+    RUN(ShakerSort_Yakimchik, false);
+
 
     dataset = "WorstCase";
     cout << "Testing on the worst case...." << endl;
@@ -85,10 +85,9 @@ int main() {
     RUN(heapSort_Aliev, false);
     RUN(mergeSort_Batmanov, false);
     // RUN(treeSort);
-    // RUN(mergeSortBatmanov);
-    // RUN(gnomeSortNikitina);
-    // RUN(shakerSort);
-    // RUN(insertionSortSereda);
+    RUN(gnomeSort_Nikitina, false);
+    RUN(ShakerSort_Yakimchik, false);
+
 
     dataset = "RandomCase";
     cout << "Testing on the random case...." << endl;
@@ -103,10 +102,9 @@ int main() {
     RUN(heapSort_Aliev, false);
     RUN(mergeSort_Batmanov, false);
     // RUN(treeSort);
-    // RUN(mergeSortBatmanov);
-    // RUN(gnomeSortNikitina);
-    // RUN(shakerSort);
-    // RUN(insertionSortSereda);
+    RUN(gnomeSort_Nikitina, false);
+    RUN(ShakerSort_Yakimchik, false);
+
 
     cout << "Press Enter to exit...";
     cin.get();  

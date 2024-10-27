@@ -1,8 +1,8 @@
-#include <sort_algorithms.h>
+#include "sort_algorithms.h"
 #include <iostream>
 #include <list>
 
-void gnomeSortNikitina(std::list<int>& data) {
+void gnomeSort_Nikitina(std::list<int>& data) {
     if (data.size() < 2) {
         return;
     }

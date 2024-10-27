@@ -1,8 +1,8 @@
-#include <sort_algorithms.h>
+#include "sort_algorithms.h"
 #include <iostream>
 #include <list>
 
-void shakerSort(std::list<int>& data) {
+void ShakerSort_Yakimchik(std::list<int>& data) {
     bool swapped = true;
     auto start = data.begin();
     auto end = data.end();
