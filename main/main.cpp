@@ -75,11 +75,13 @@ int main() {
     dataset = "WorstCase";
     cout << "Testing on the worst case...." << endl;
     data = generateWorstData(size);
-    cout << "The original array: ";
+    cout << "The original array: " << endl;
     for (const auto& item : data) {
         cout << item << " ";
     }
-    cout << endl;
+    cout << endl << endl;
+    
+    RUN(insertionSort_Sereda, true);
     RUN(heapSort_Aliev, false);
     // RUN(treeSort);
     // RUN(mergeSortBatmanov);
@@ -90,11 +92,13 @@ int main() {
     dataset = "RandomCase";
     cout << "Testing on the random case...." << endl;
     data = generateRandomData(size);
-    cout << "The original array: ";
+    cout << "The original array: " << endl;
     for (const auto& item : data) {
         cout << item << " ";
     }
-    cout << endl;
+    cout << endl << endl;
+    
+    RUN(insertionSort_Sereda, true);
     RUN(heapSort_Aliev, false);
     // RUN(treeSort);
     // RUN(mergeSortBatmanov);
