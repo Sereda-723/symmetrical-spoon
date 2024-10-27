@@ -36,12 +36,3 @@ void heapSort(list<int>& arr) {
         heapify(arr, i, 0);
     }
 }
-
-int main(list<int>& data) {
-    list<int> arr = data;
-
-
-    heapSort(arr);
-
-    return 0;
-}
