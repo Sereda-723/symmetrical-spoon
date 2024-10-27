@@ -5,7 +5,7 @@
 #include <list>
 #include <chrono>
 #include <fstream>
-#include <data_generator.h>
+#include "data_generator.h"
 #include "sort_algorithms.h"
 #include <vector>
 
@@ -32,22 +32,26 @@ void Run(const string& method_name, SortMethod sort_method, const list<T>& data)
 
     auto start = chrono::high_resolution_clock::now();
     list<T> sorted_data = data;
+    sort_method(sorted_data);
     auto stop = chrono::system_clock::now();
     auto time = chrono::duration_cast<chrono::microseconds>(stop - start).count();
 
     bool is_sorted = std::is_sorted(sorted_data.begin(), sorted_data.end());
 
     cout << "Algorithm " << method_name << (is_sorted ? " completed successfully." : " completed with an error.") << endl;
-cout << "Time: " << duration << " mcs" << endl << endl;
+cout << "Time: " << time << " mcs" << endl << endl;
 }
 
 int main() {
     int size = 100;
+    list<int> data;
+
     cout << "************ Comparison of algorithms for sorting structures with sequential access ************" << endl;
 
+    
     dataset = "BestCase";
     cout << "Testing on the best case...." << endl;
-    list<int> data = generateBestData(size);
+    data = generateBestData(size);
     RUN(heapSort_Aliev);
     // RUN(treeSort);
     // RUN(mergeSortBatmanov);
@@ -57,7 +61,7 @@ int main() {
 
     dataset = "WorstCase";
     cout << "Testing on the worst case...." << endl;
-    list<int> data = generateWorstData(size);
+    data = generateWorstData(size);
     RUN(heapSort_Aliev);
     // RUN(treeSort);
     // RUN(mergeSortBatmanov);
@@ -67,13 +71,17 @@ int main() {
 
     dataset = "RandomCase";
     cout << "Testing on the random case...." << endl;
-    list<int> data = generateRandomData(size);
+    data = generateRandomData(size);
     RUN(heapSort_Aliev);
     // RUN(treeSort);
     // RUN(mergeSortBatmanov);
     // RUN(gnomeSortNikitina);
     // RUN(shakerSort);
     // RUN(insertionSortSereda);
+
+    cout << "Press Enter to exit...";
+    cin.get();  
+    return 0;
 
 }
 
