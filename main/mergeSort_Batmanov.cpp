@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void merge(list<int>& arr, list<int>::iterator left, list<int>::iterator mid, list<int>::iterator right) {
+void merge(list<int>::iterator left, list<int>::iterator mid, list<int>::iterator right) {
     list<int> L(left, mid);
     list<int> R(mid, right);
 
@@ -45,7 +45,7 @@ void mergeSort(list<int>& arr, list<int>::iterator left, list<int>::iterator rig
         mergeSort(arr, left, mid);
         mergeSort(arr, mid, right);
 
-        merge(arr, left, mid, right);
+        merge(left, mid, right);
     }
 }
 
