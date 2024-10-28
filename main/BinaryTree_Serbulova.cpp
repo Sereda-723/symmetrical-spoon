@@ -1,3 +1,4 @@
+#include "sort_algorithms.h"
 #include <iostream>
 #include <list>
 
@@ -33,16 +34,15 @@ void inorderTraversal(TreeNode<T>* node, std::list<T>& lst) {
     }
 }
 
-template<typename T>
-std::list<T> BinaryTree_Serbulova(std::list<T> inputList) {
-    TreeNode<T>* root = nullptr;
+void BinaryTree_Serbulova(std::list<int>& inputList) {
+    TreeNode<int>* root = nullptr;
 
-    for (const T& value : inputList) {
+    for (const int& value : inputList) {
         root = insert(root, value);
     }
 
-    std::list<T> sortedList;
+    std::list<int> sortedList;
     inorderTraversal(root, sortedList);
 
-    return sortedList;
+    inputList = sortedList;
 }
