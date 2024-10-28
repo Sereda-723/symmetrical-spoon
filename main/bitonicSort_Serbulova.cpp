@@ -33,7 +33,7 @@ void bitonicSort(list<T>& data, int low, int cnt)
     }
 }
 
-void BitonicSortSerbulova(list<int>& data) {
+void bitonicSort_ Serbulova(list<int>& data) {
     int n = data.size();
     int nextPowerOf2 = 1;
 
