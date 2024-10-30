@@ -5,8 +5,8 @@
 #include <list>
 #include <chrono>
 #include <fstream>
-#include "data_generator.h"
-#include "sort_algorithms.h"
+#include "data/data_generator.h"
+#include "algorithm/sort_algorithms.h"
 
 
 
